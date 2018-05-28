@@ -7,7 +7,7 @@ from bravado.swagger_model import load_file
 def get_environment_variables(env):
 
     URLS = Dict()
-    URLS.local.game_service = 'http://localhost:5005'
+    URLS.local.card_service = 'http://localhost:5005'
     URLS.local.card_service_db = 'postgresql+psycopg2://postgres:daleria@127.0.0.1:5432/card_service'
 
     URLS.container.card_service = 'card-service:5005'

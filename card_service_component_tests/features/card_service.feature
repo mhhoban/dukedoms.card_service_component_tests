@@ -3,7 +3,7 @@ Feature: Card Service
 
   Scenario: Fetch Card Catalog
     When card service receives request for card catalog
-    Then it returns the expected card catalog
+    Then card service returns the expected card catalog
 
   Scenario: Card Info Request
     When card service receives request for card info for card ids:
