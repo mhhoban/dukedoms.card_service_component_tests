@@ -4,7 +4,7 @@ card_catalog = {
         'category': 'treasure',
         'type': 'treasure',
         'cost': 0,
-        'actions': None,
+        'actions': 'None',
         'value': 1,
         'victoryPoints': 0,
         'id': 1
@@ -14,7 +14,7 @@ card_catalog = {
         'category': 'treasure',
         'type': 'treasure',
         'cost': 3,
-        'actions': None,
+        'actions': 'None',
         'value': 2,
         'victoryPoints': 0,
         'id': 2
@@ -24,7 +24,7 @@ card_catalog = {
         'category': 'treasure',
         'type': 'treasure',
         'cost': 6,
-        'actions': None,
+        'actions': 'None',
         'value': 3,
         'victoryPoints': 0,
         'id': 3
@@ -34,7 +34,7 @@ card_catalog = {
         'category': 'victory',
         'type': 'victory',
         'cost': 1,
-        'actions': None,
+        'actions': 'None',
         'value': 0,
         'victoryPoints': 1,
         'id': 4
@@ -44,7 +44,7 @@ card_catalog = {
         'category': 'victory',
         'type': 'victory',
         'cost': 1,
-        'actions': None,
+        'actions': 'None',
         'value': 0,
         'victoryPoints': 2,
         'id': 5
@@ -54,7 +54,7 @@ card_catalog = {
         'category': 'victory',
         'type': 'victory',
         'cost': 1,
-        'actions': None,
+        'actions': 'None',
         'value': 0,
         'victoryPoints': 3,
         'id': 6

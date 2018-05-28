@@ -10,8 +10,8 @@ Feature: Card Service
       | card id |
       | 1       |
     Then card service returns card info:
-      | id | name        | category | type     | cost | actions | value | victory points |
-      | 1  | Bronze Coin | treasure | treasure | 0    |         | 1     | 0              |
+      | card id | name        | category | type     | cost | actions | value | victory points |
+      | 1       | Bronze Coin | treasure | treasure | 0    | None    | 1     | 0              |
 
   Scenario: Set and Retrieve Card List
     Given an empty card service db

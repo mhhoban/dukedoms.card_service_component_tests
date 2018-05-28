@@ -39,8 +39,37 @@ def assert_card_catalog(context):
             equal_to(expected_card_catalog[item])
         )
 
-@when('When card service receives request for card info for card ids')
+@when('card service receives request for card info for card ids')
 def request_card_info(context):
     """
     query card service for a specific card's info
     """
+    card_ids = [int(row['card id']) for row in context.table]
+
+    card_info, result = context.clients.card_service.cardInfo.get_card_info(
+        cardIds=card_ids
+    ).result()
+
+    assert_that(result.status_code, equal_to(200))
+    context.card_info = card_info
+
+@then('card service returns card info')
+def assert_card_info(context):
+    """
+    assert correct card info retreived
+    """
+    for row in context.table:
+        card = context.clients.card_service.get_model('CardInfo')(
+            id=int(row['card id']),
+            name=row['name'],
+            category=row['category'],
+            type=row['type'],
+            cost=int(row['cost']),
+            actions=row['actions'],
+            value=int(row['value']),
+            victoryPoints=int(row['victory points'])
+        )
+        assert_that(
+            context.card_info,
+            has_item(card)
+        )
