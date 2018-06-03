@@ -59,6 +59,7 @@ card_catalog = {
         'victoryPoints': 3,
         'id': 6
     },
+
     '7': {
         'name': 'Township',
         'category': 'action',
@@ -79,7 +80,7 @@ card_catalog = {
         'cost': 1,
         'actions': [
             {'action':'addDraw', 'arguments':'draws=2'},
-            {'action':'addAction', 'arguments':'actions=1'}
+            {'action':'addActions', 'arguments':'actions=1'}
         ],
         'value': 0,
         'victoryPoints': 0,
@@ -110,7 +111,7 @@ card_catalog = {
         'category': 'action',
         'type': 'action',
         'cost': 1,
-        'actions': [{'action': 'addAction', 'arguments':'actions=1'}],
+        'actions': [{'action': 'addActions', 'arguments':'actions=1'}],
         'value': 0,
         'victoryPoints': 0,
         'id': 11,
@@ -124,11 +125,57 @@ card_catalog = {
             {'action': 'addTempTreasure', 'arguments': 'treasure=1'},
             {'action': 'addDraw', 'arguments': 'draws=1'},
             {'action': 'addBuys', 'arguments': 'buys=1'},
-            {'action': 'addAction', 'arguments': 'actions=1'}
+            {'action': 'addActions', 'arguments': 'actions=1'}
 
         ],
         'victoryPoints': 0,
         'id': 12
+    },
+    '13': {
+        'name': 'Woodsman',
+        'category': 'action',
+        'type': 'action',
+        'cost': 1,
+        'actions': [
+            {'action': 'addBuys', 'arguments': 'buys=1'}
+        ],
+        'victoryPoints': 0,
+        'id': 13
+    },
+    '14': {
+        'name': 'Fiete',
+        'category': 'action',
+        'type': 'action',
+        'cost': 1,
+        'actions': [
+            {'action':'addActions', 'arguments': 'actions=2'},
+            {'action':'addBuys', 'arguments':'buys=1'},
+            {'action':'addTempTreasure', 'arguments':'treasure=2'}
+        ],
+        'victoryPoints': 0,
+        'id': 14
+    },
+    '15': {
+        'name': 'Artificer',
+        'category': 'action',
+        'type': 'action',
+        'cost': 1,
+        'actions': [
+            {'action':'addGain', 'arguments':'limit=4'},
+        ],
+        'victoryPoints': 0,
+        'id': 15
+    },
+    '16': {
+        'name': 'Sorceress',
+        'category': 'action',
+        'type': 'action',
+        'cost': 1,
+        'actions': [
+            {'action':'addDraws', 'arguments':'draws=2'},
+            {'action':'addCurse', 'arguments':'target=all'},
+        ],
+        'victoryPoints': 0,
+        'id': 16
     }
-
 }

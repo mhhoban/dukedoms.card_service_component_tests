@@ -14,9 +14,9 @@ def before_scenario(context, step):
     }
 
     context.env_urls = Dict()
-    context.env_urls.card_service = 'http://dukedoms-card-service:8080'
+    context.env_urls.card_service = 'http://127.0.0.1:5005'
     context.env_urls.card_service_db = (
-        'postgresql+psycopg2://postgres:daleria@dukedoms-rdbs:5432/card_service'
+        'postgresql+psycopg2://postgres:daleria@127.0.0.1:5432/card_service'
     )
 
     context.clients = Dict()

@@ -1,0 +1,28 @@
+version: '2'
+networks:
+  internal:
+    driver: bridge
+
+services:
+  dukedoms-rdbs:
+    image: mhhoban/dukedoms-rdbs
+    networks:
+      internal:
+        aliases:
+          - dukedoms-rdbs
+
+  dukedoms-card-service:
+    image: mhhoban/dukedoms-card-service:candidate
+    command: ["../wait-for-it.sh", "dukedoms-rdbs:5432", "--", "gunicorn", "main:application", "-b", "0.0.0.0:8080"]
+    networks:
+      internal:
+        aliases:
+          - dukedoms-card-service
+
+  tests:
+    image: mhhoban/dukedoms-card-service-tests:latest
+    command: ["../wait-for-it.sh", "dukedoms-card-service:8080", "--", "behave"]
+    networks:
+      internal:
+        aliases:
+          - dukedoms-card-service
