@@ -44,7 +44,7 @@ def request_card_info(context):
     """
     query card service for a specific card's info
     """
-    card_ids = [int(row['card id']) for row in context.table]
+    card_ids = [row['card id'] for row in context.table]
 
     card_info, result = context.clients.card_service.cardInfo.get_card_info(
         cardIds=card_ids
